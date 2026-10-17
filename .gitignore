@@ -1,0 +1,18 @@
+# Dependencies are never installed into the plugin itself: it is zero-dependency
+# by design, and a `link:` install lives outside the profile.
+node_modules/
+.pnpm-store/
+
+# Scratch space used while reverse-engineering the harness. Never part of the
+# plugin, never part of a release.
+.recon/
+
+# Harness runtime state, if this tree is ever used as a working directory.
+.dsh/
+
+# Build output is committed on purpose (users download the zip straight from the
+# repository), so `dist/` is deliberately not ignored.
+
+*.log
+Thumbs.db
+desktop.ini

@@ -1,0 +1,6 @@
+# Keep the repository byte-stable across machines: normalise text to LF, and
+# leave the fixtures that must stay byte-exact alone.
+* text=auto eol=lf
+
+*.zip binary
+*.pem -text

@@ -1,0 +1,17 @@
+{
+  "package": "dsh-plugin-mail-notify-1.0.0.zip",
+  "version": "1.0.0",
+  "created_at": "2026-10-17T01:42:20.059Z",
+  "file_count": 29,
+  "bytes": 102042,
+  "sha256": "774C92DB128D9C9542FDFD296211452D60EA542B830A2658A3CC72B3A19BAD4F",
+  "excluded": [
+    ".git",
+    ".pnpm-store",
+    "deliverables",
+    "dist",
+    "node_modules",
+    "test",
+    "tools"
+  ]
+}

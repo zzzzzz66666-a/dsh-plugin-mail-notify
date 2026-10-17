@@ -1,0 +1,20 @@
+{
+  "name": "dsh-plugin-mail-notify",
+  "title": {
+    "zh": "邮件通知与续聊",
+    "en": "Mail Notify"
+  },
+  "description": {
+    "zh": "轮次结束时发送摘要邮件；在严格校验白名单邮箱、任务编号与一次性验证码之后，允许回复邮件继续原会话。权限审批永不通过邮件批准。",
+    "en": "Emails a summary when a turn ends, and routes a strictly verified mail reply back into the same session. Approvals are never granted by mail."
+  },
+  "tags": [
+    "notification",
+    "email",
+    "smtp",
+    "imap",
+    "continuation",
+    "automation"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,42 @@
+# dsh-plugin-mail-notify — profile patch layer.
+#
+# Installed as a bundle: adding the package to the profile's dependencies and
+# enabling the row below mounts the host half. `mail-notify` is the id the
+# profile can later target to override or disable just this plugin.
+#
+# The row is inserted without `config` on purpose. The plugin loads fine while
+# unconfigured — it starts, reports `configured: false` and does nothing — and
+# `scripts/configure.mjs` then fills in the row. A half-filled config would
+# still validate as "not configured", but an absent block keeps the state
+# unambiguous.
+#
+# After configuring, a complete row looks like this:
+#
+# - insert:
+#     - id: mail-notify
+#       name: 'dsh-plugin-mail-notify'
+#       config:
+#         senderEmail: you@qq.com
+#         recipientEmail: you@qq.com
+#         allowedReplyEmail: you@qq.com
+#         smtpHost: smtp.qq.com
+#         smtpPort: 465
+#         smtpSecurity: ssl
+#         imapHost: imap.qq.com
+#         imapPort: 993
+#         imapSecurity: ssl
+#         subjectPrefix: '[DSH]'
+#         notificationsEnabled: true
+#         continuationEnabled: true
+#         replyTokenTtlHours: 24
+#         maxReplyLength: 8000
+#         includeReplySummary: true
+#         replySummaryMaxChars: 600
+#         maxRepliesPerMinute: 20
+#         pollIntervalMs: 30000
+#
+# The authorization code is NOT part of this row. It belongs to the harness
+# credential store under the reference `DSH_MAIL_NOTIFY_AUTH_CODE`.
+- insert:
+    - id: mail-notify
+      name: 'dsh-plugin-mail-notify'

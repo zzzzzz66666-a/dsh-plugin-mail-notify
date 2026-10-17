@@ -1,0 +1,73 @@
+{
+  "name": "dsh-plugin-mail-notify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeepSeek Harness mail notifications: emails a summary when a turn ends and lets a verified mail reply continue the same session. Harness-native port of the Codex mail notification component.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "email",
+    "smtp",
+    "imap",
+    "continuation"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./config": {
+      "default": "./lib/config.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "package.json",
+    "dsh.plugin.json",
+    "cordis.patch.yml",
+    "LICENSE",
+    "lib/index.js",
+    "lib/bridge.js",
+    "lib/service.js",
+    "lib/config.js",
+    "lib/domain.js",
+    "lib/store.js",
+    "lib/secrets.js",
+    "lib/notifications.js",
+    "lib/replies.js",
+    "lib/routing.js",
+    "lib/audit.js",
+    "lib/mail/errors.js",
+    "lib/mail/mime.js",
+    "lib/mail/transport.js",
+    "lib/mail/smtp.js",
+    "lib/mail/imap.js",
+    "scripts/configure.mjs",
+    "scripts/set-credential.mjs",
+    "scripts/verify-install.mjs",
+    "scripts/uninstall.mjs",
+    "scripts/check-mailbox.mjs",
+    "scripts/run-tests.mjs",
+    "scripts/lib/profile-edit.mjs",
+    "README.md",
+    "README.zh.md"
+  ],
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "configure": "node scripts/configure.mjs",
+    "set-credential": "node scripts/set-credential.mjs",
+    "verify": "node scripts/verify-install.mjs",
+    "check-mailbox": "node scripts/check-mailbox.mjs",
+    "pack": "node tools/pack-plugin.mjs",
+    "pack:check": "node tools/pack-plugin.mjs --check",
+    "release": "node tools/pack-release.mjs",
+    "uninstall": "node scripts/uninstall.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
